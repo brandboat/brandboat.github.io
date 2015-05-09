@@ -5,16 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>brandboat</title>
+  <title>Routing on OpenStreetMap (Pgrouting) - brandboat</title>
   <meta name="author" content="brandboat">
 
   
-  <meta name="description" content="1
-unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到的，主要是第一次看到 &amp;> 這樣的寫法感到好奇才特別去查。 之前曾經學過有關於 shell script 訊息導向(redirection)的部份，但看到的多是 1
-2
-3
-4
-5 &hellip;&#8221;>
+  <meta name="description" content="postgresql+postGIS+pgrouting+nodejs+OSM">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -23,7 +18,7 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://brandboat.github.io/">
+  <link rel="canonical" href="http://brandboat.github.io/blog/2014/08/16/Routing_on_OSM/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="brandboat" type="application/atom+xml">
@@ -69,224 +64,12 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2015/02/09/bash_redirect/">Bash Redirect : &></a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-02-09'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unalias fs &&gt; /dev/null</span></code></pre></td></tr></table></div></figure>
-
-
-<p>這指令是在看 hadoop 安裝指南 時注意到的，主要是第一次看到 &amp;> 這樣的寫法感到好奇才特別去查。</p>
-
-<p>之前曾經學過有關於 shell script 訊息導向(redirection)的部份，但看到的多是</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// 1. stderr redirect to /dev/null
-</span><span class='line'>unalias fs 2&gt; /dev/null 
-</span><span class='line'>
-</span><span class='line'>// 2. stderr redirect to stdout
-</span><span class='line'>grep * 2&gt;&1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>這邊稍微解釋一下，1代表 standard output，2代表standard error。</p>
-
-<p>而 &amp;> 其實就是將 stderr 與 stdout 導向至檔案，其意思等同於</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&gt; file 2&gt;&1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>舉個例子，我們要將標題的指令中的所有訊息全部導向至 /dev/null 這個大黑洞，原本要打</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unalias fs &gt; /dev/null 2&gt;&1</span></code></pre></td></tr></table></div></figure>
-
-
-<p>現在只要換成</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unalias fs &&gt; /dev/null</span></code></pre></td></tr></table></div></figure>
-
-
-<p>或者</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>unalias fs &gt;& /dev/null</span></code></pre></td></tr></table></div></figure>
-
-
-<p>但這樣簡便的寫法只有在 bash 可以用，csh，tcsh，sh 則沒有。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/16/Mei_Chu_Hackthon/">梅竹黑客松</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-12-16'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>交大黑客松有別於去年，今年似乎是與清大一起合辦，整體資源都比去年還要更加豐富，表現更加亮眼。其實去年最不滿意的也就只有餐點真的不太好，&#8221;便當 Buffet&#8221; ，老實說我都不太吃，等到點心時段衝上去搶餅乾刺激多了！今年一整個大翻盤，buffet很澎湃，至少連像我這樣對飲食挑剔的人聽到餐點時段都願意放下手邊的程式碼跑下去大吃一頓，很多參加的朋友也說吃的很開心，本來黑客松就是要這樣嘛！吃飽Coding，Coding飽吃，不得不說才舉辦第2年就有這樣的表現，主辦單位表現不俗。</p>
-
-<p>今年還有令一個很大的好處就是不再是每一組都要上台DEMO，這樣實在太花時間。今年可能因為隊伍數較多，是由各個企業分別選出該類別前2名上台DEMO，時間上就節省很多。另外，梅竹黑客松，不像其他黑客松幾乎都是只有一個主題，全部隊伍選出前3名，以及幾組佳作，他們會先讓各組選自己適合的類別，比如我們這組覺得 <code>Windows Azure</code> 的題目較適合我們，那我們被分配到那組之後，就是與同樣都是那類別的人競爭，一個類別還沒有超過10組的，老實說機會很大。(雖然我們還是沒得名&hellip;)</p>
-
-<p>話說去年我們真的啥都不會，糊裡糊塗就被分到博晶醫電，很訝異看到居然是<code>jserv</code>負責這項組別，他提到目前裝置沒有 Android 版本的 APP，於是我們小組便試著去幫他們開發，但重點來了！我們這組根本沒有人會寫 App，勉強要說我也才學一個月，根本就跟初心者沒兩樣，一般人大概會覺得很不可思議，怎麼會用自己最不擅長的東西去開發產品？特別又在時間最為緊迫的黑客松？但老實說我們什麼都不精，自然而然也就沒有時間下去想這些，只覺得這樣的想法很不錯，最後不管三七二十一還是栽下去了。好在最後至少可以把心電圖轉在手機上呈現，可惜的是我們在DEMO時插錯投影機接頭，DEMO失敗&hellip;。不過 jserv 很欣賞我們的表現，最後仍給我們第三名的成績，本來我們隊名就叫作 <code>GGZMain</code>，就是想北上<code>見見世面</code>罷了，怎樣丟臉都不在乎，但 <code>jserv</code> 給我們這樣的獎項老實說心裡感動不少，又給我們一個動力繼續前進！</p>
-
-<p>今年就不一樣了，算是事前就有規劃好題目，有稍微做一點作業，我們題目是做一個校園腳特車擁擠程度即時系統，主要就是讓正在使用此 APP 的學生看到附近的腳踏車車位是否過於壅塞，並且給一個壅塞指數評分，這樣子要上課的學生就知道要避免去停在那些過於壅塞的地方，讓每個人都可以快速找到車位。雖然沒有受到評審青睞，但至少DEMO成功！畢竟我們<code>GKZMain</code>(<code>見過世面</code>)！XDD</p>
-
-<p>兩年比較下來我認為隊伍水平是去年較高，UI/UX 也是去年較為優秀，創新程度的話或許今年表現好一些，但趣味程度&hellip;去年做馬總統 Schedule 追蹤系統讓我笑到半死，到現在我還是覺得他們有趣的多！今年自己最喜歡的是<code>Project jəmp</code>，由於最近大家都喜歡跳到半空中拍照，但捕捉但瞬間不太容易，他們就應用的迪英加科技所提供的設備去偵測跳到最高點的時間讓手機自動按下快門。這idea真的超棒，我覺得根本就可以出去開公司了吧？！也難怪他們最後拿到進入 <code>NTU Hackathon</code> 的入場卷，厲害！</p>
-
-<p>我是成大生，老實說很羨慕台清交都有這樣的活動，閉幕的時候聽到台大霸氣的說出今年預估招到 800 人，並且會招攬國外隊伍，震驚到說不出話來，雖說這幾所大學資源或許比我們豐富，但差異如此之大還是太令人訝異。號稱南霸天的我們，也不能辜負這名號阿！每年自己北上參加黑客松都在感慨，花了這一頓車錢，就是想看看同年紀的大學生究竟可以做到怎樣的程度，畢竟南北有別，成大風氣趨向保守，如果可以，很希望為成大注入一股熱血，據聞系上有老師也希望可以舉辦黑客松，已經開始招兵買馬籌畫流程。也讓自己想到或許我們可以借鏡梅竹黑克松的經驗，讓南部學生也有自己的黑客松！
-<img src="http://hackathon.nctu.edu.tw/img/logo-blue.png" alt="" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/02/chrome-bookmark-mojibake/">Chrome 標籤亂碼</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-12-02'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ubuntu 解決辦法如下：</p>
-
-<p><code>sudo vim /etc/fonts/conf.d/49-sansserif.conf</code>
-內容如下</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0"?&gt;
-</span><span class='line'>&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
-</span><span class='line'>&lt;fontconfig&gt;
-</span><span class='line'>&lt;!--
-</span><span class='line'>If the font still has no generic name, add sans-serif
-</span><span class='line'>--&gt;
-</span><span class='line'>  &lt;match target="pattern"&gt;
-</span><span class='line'>    &lt;test qual="all" name="family" compare="not_eq"&gt;
-</span><span class='line'>      &lt;string&gt;sans-serif&lt;/string&gt;
-</span><span class='line'>    &lt;/test&gt;
-</span><span class='line'>    &lt;test qual="all" name="family" compare="not_eq"&gt;
-</span><span class='line'>      &lt;string&gt;serif&lt;/string&gt;
-</span><span class='line'>    &lt;/test&gt;
-</span><span class='line'>    &lt;test qual="all" name="family" compare="not_eq"&gt;
-</span><span class='line'>      &lt;string&gt;monospace&lt;/string&gt;
-</span><span class='line'>    &lt;/test&gt;
-</span><span class='line'>    &lt;edit name="family" mode="append_last"&gt;
-</span><span class='line'>      &lt;string&gt;sans-serif&lt;/string&gt;
-</span><span class='line'>    &lt;/edit&gt;
-</span><span class='line'>  &lt;/match&gt;
-</span><span class='line'>&lt;/fontconfig&gt;
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>將</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;edit name="family" mode="append_last"&gt;
-</span><span class='line'>  &lt;string&gt;sans-serif&lt;/string&gt;
-</span><span class='line'>&lt;/edit&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>中的 <code>sans-serif</code> 改為你想要的中文字型，若不知道就填寫 <code>Ubuntu</code>。</p>
-
-<ul>
-<li>其他關於字型可參考的文章 ： <a href="http://scar.simcz.tw/article/2014/04/22/fix-ubuntu-14-04-lts-zh-font-selector/">http://scar.simcz.tw/article/2014/04/22/fix-ubuntu-14-04-lts-zh-font-selector/</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/16/Routing_on_OSM/">Routing on OpenStreetMap (Pgrouting)</a></h1>
+      <h1 class="entry-title">Routing on OpenStreetMap (Pgrouting)</h1>
     
     
       <p class="meta">
@@ -302,7 +85,7 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
   </header>
 
 
-  <div class="entry-content"><p>Demo: <a href="http://routingonosm-brandboat.rhcloud.com/">http://routingonosm-brandboat.rhcloud.com/</a>
+<div class="entry-content"><p>Demo: <a href="http://routingonosm-brandboat.rhcloud.com/">http://routingonosm-brandboat.rhcloud.com/</a>
 github project: <a href="https://github.com/brandboat/Routing-On-OSM">https://github.com/brandboat/Routing-On-OSM</a></p>
 
 <p>這個 project 主要是利用 pgrouting 讓 openstreetmap 來做兩點最佳路徑規劃，像這類 routing project 其實已經是老生常談，大概 google 一下都能找到很類似的 project (<a href="http://wiki.openstreetmap.org/wiki/Routing">OSM Routing</a>)，但是利用 pgrouting 的似乎不多，google找到相關技術整合的文章也是寥寥可數，我在這邊分享我如何利用 openstreetmap + pgrouting + nodejs 寫出一個簡單的 routing project，以及遇到的問題。</p>
@@ -567,122 +350,56 @@ ex.橫跨路中央的橋就會讓結果受到干擾。(待解決)
 <a href="https://www.openshift.com/blogs/add-map-navigation-to-your-app-with-pgrouting-on-openshift">https://www.openshift.com/blogs/add-map-navigation-to-your-app-with-pgrouting-on-openshift</a>
 <a href="https://www.openshift.com/blogs/instant-mapping-applications-with-postgis-and-nodejs">https://www.openshift.com/blogs/instant-mapping-applications-with-postgis-and-nodejs</a></p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/29/vimrc-colorscheme/">Vim 設置 Colorscheme</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-29'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/jpo/vim-railscasts-theme"><strong>vim-railscasts-theme</strong></a></p>
-
-<ul>
-<li><p><strong><code>cd ~/.vim/colors</code></strong>
-若無此資料夾，請自行新建</p></li>
-<li><p><strong><code>vim railscasts.vim</code></strong>
-複製 <a href="https://github.com/jpo/vim-railscasts-theme"><strong>vim-railscasts-theme</strong></a> 中的 railscasts.vim 到裡頭</p></li>
-<li><p><strong><code>vim ~/.vimrc</code></strong>
-加入此行
-<code>colorscheme railscasts</code>
-或者
-<code>colo railscasts</code>
-來設置 colorscheme</p></li>
-</ul>
-
-
-<p><img src="http://sunaku.github.io/vim-256color-bce-xterm.png" alt="" /><br/><br/>
-(圖片來源自：<a href="http://sunaku.github.io/vim-256color-bce-xterm.png">http://sunaku.github.io/vim-256color-bce-xterm.png</a>)
-<br/><br/>
-如果使用了<code>colorscheme</code>而在<code>tmux</code>開<code>vim</code>時出現每一行底色跟背景顏色不一致的情況，這是因為設置了<code>TERM=xterm-256color</code>而衍生出來的問題，解決辦法 ：  <a href="http://sunaku.github.io/vim-256color-bce.html">disable Background Color Erase</a> 。</p>
-
-<ul>
-<li>在<code>~/.vimrc</code>中加入</li>
-</ul>
-
-
-<p><code>set t_ut=</code></p>
-</div>
-  
   
 
+<span class="byline author vcard">Posted by <span class="fn">brandboat</span></span>
 
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+
+
+
+<time class='entry-date' datetime='2014-08-16'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/nodejs/'>nodejs</a>, <a class='category' href='/blog/categories/osm/'>osm</a>, <a class='category' href='/blog/categories/pgrouting/'>pgrouting</a>, <a class='category' href='/blog/categories/postgis/'>postgis</a>, <a class='category' href='/blog/categories/postgresql/'>postgresql</a>
+  
+</span>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/09/ubuntu-alttab-multiple-windows-bar/">解決 Ubuntu Alt+tab 顯示雙層切換視窗</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-09'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>這問題是因為在CompizConfig Setting Manager中Gereral欄位中開啟Mipmap選項的緣故。</strong>
-<br/><br/>
-<img src="http://i292.photobucket.com/albums/mm16/namtlade/Windowswitcherfail.png" alt="markdown" /><br/><br/>
-圖片來源自: <a href="http://ubuntuforums.org/showthread.php?p=6024749">http://ubuntuforums.org/showthread.php?p=6024749</a></p>
-
-<h3>解決方法如下 ：</h3>
-
-<ul>
-<li><strong>開啟 CompizConfig Setting Manager，並搜尋 Application Switcher.</strong></li>
-</ul>
-
-
-<p><a href="http://www.flickr.com/photos/keithworld/12163523303/" title="select003, on Flickr"><img src="http://farm4.staticflickr.com/3690/12163523303_c7245bebb0_z.jpg" alt="Bird Nest"></a></p>
-
-<ul>
-<li><strong>關閉 Mipmap 選項，並開啟 Enable Application Switcher.</strong></li>
-</ul>
-
-
-<p><a href="http://www.flickr.com/photos/keithworld/12163521963/" title="select005, on Flickr"><img src="http://farm6.staticflickr.com/5473/12163521963_313a182365_z.jpg" alt="Bird Nest"></a><br/><br/>
-參考資料 ： <a href="http://ubuntuforums.org/showthread.php?p=6024749">http://ubuntuforums.org/showthread.php?p=6024749</a></p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://brandboat.github.io/blog/2014/08/16/Routing_on_OSM/" data-via="brandboat" data-counturl="http://brandboat.github.io/blog/2014/08/16/Routing_on_OSM/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/01/29/vimrc-colorscheme/" title="Previous Post: vim 設置 colorscheme">&laquo; vim 設置 colorscheme</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/12/02/chrome-bookmark-mojibake/" title="Next Post: Chrome 標籤亂碼">Chrome 標籤亂碼 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -718,6 +435,7 @@ ex.橫跨路中央的橋就會讓結果受到干擾。(待解決)
 
   
 </aside>
+
 
     </div>
   </div>

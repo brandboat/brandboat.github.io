@@ -1,99 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>brandboat</title>
-  <meta name="author" content="brandboat">
-
-  
-  <meta name="description" content="1
-unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到的，主要是第一次看到 &amp;> 這樣的寫法感到好奇才特別去查。 之前曾經學過有關於 shell script 訊息導向(redirection)的部份，但看到的多是 1
-2
-3
-4
-5 &hellip;&#8221;>
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://brandboat.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="brandboat" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">brandboat</a></h1>
-  
-    <h2>Tyler says the things you own, end up owning you.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="brandboat.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[brandboat]]></title>
+  <link href="http://brandboat.github.io/atom.xml" rel="self"/>
+  <link href="http://brandboat.github.io/"/>
+  <updated>2015-05-10T01:26:34+08:00</updated>
+  <id>http://brandboat.github.io/</id>
+  <author>
+    <name><![CDATA[brandboat]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2015/02/09/bash_redirect/">Bash Redirect : &></a></h1>
-    
-    
-      <p class="meta">
-        
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-
-
-
-<time class='entry-date' datetime='2015-02-09'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+  
+  <entry>
+    <title type="html"><![CDATA[Bash Redirect : &>]]></title>
+    <link href="http://brandboat.github.io/blog/2015/02/09/bash_redirect/"/>
+    <updated>2015-02-09T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2015/02/09/bash_redirect</id>
+    <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>unalias fs &&gt; /dev/null</span></code></pre></td></tr></table></div></figure>
 
 
@@ -140,35 +65,15 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
 
 
 <p>但這樣簡便的寫法只有在 bash 可以用，csh，tcsh，sh 則沒有。</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/16/Mei_Chu_Hackthon/">梅竹黑客松</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-12-16'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>交大黑客松有別於去年，今年似乎是與清大一起合辦，整體資源都比去年還要更加豐富，表現更加亮眼。其實去年最不滿意的也就只有餐點真的不太好，&#8221;便當 Buffet&#8221; ，老實說我都不太吃，等到點心時段衝上去搶餅乾刺激多了！今年一整個大翻盤，buffet很澎湃，至少連像我這樣對飲食挑剔的人聽到餐點時段都願意放下手邊的程式碼跑下去大吃一頓，很多參加的朋友也說吃的很開心，本來黑客松就是要這樣嘛！吃飽Coding，Coding飽吃，不得不說才舉辦第2年就有這樣的表現，主辦單位表現不俗。</p>
+  <entry>
+    <title type="html"><![CDATA[梅竹黑客松]]></title>
+    <link href="http://brandboat.github.io/blog/2014/12/16/Mei_Chu_Hackthon/"/>
+    <updated>2014-12-16T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2014/12/16/Mei_Chu_Hackthon</id>
+    <content type="html"><![CDATA[<p>交大黑客松有別於去年，今年似乎是與清大一起合辦，整體資源都比去年還要更加豐富，表現更加亮眼。其實去年最不滿意的也就只有餐點真的不太好，&#8221;便當 Buffet&#8221; ，老實說我都不太吃，等到點心時段衝上去搶餅乾刺激多了！今年一整個大翻盤，buffet很澎湃，至少連像我這樣對飲食挑剔的人聽到餐點時段都願意放下手邊的程式碼跑下去大吃一頓，很多參加的朋友也說吃的很開心，本來黑客松就是要這樣嘛！吃飽Coding，Coding飽吃，不得不說才舉辦第2年就有這樣的表現，主辦單位表現不俗。</p>
 
 <p>今年還有令一個很大的好處就是不再是每一組都要上台DEMO，這樣實在太花時間。今年可能因為隊伍數較多，是由各個企業分別選出該類別前2名上台DEMO，時間上就節省很多。另外，梅竹黑客松，不像其他黑客松幾乎都是只有一個主題，全部隊伍選出前3名，以及幾組佳作，他們會先讓各組選自己適合的類別，比如我們這組覺得 <code>Windows Azure</code> 的題目較適合我們，那我們被分配到那組之後，就是與同樣都是那類別的人競爭，一個類別還沒有超過10組的，老實說機會很大。(雖然我們還是沒得名&hellip;)</p>
 
@@ -180,35 +85,15 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
 
 <p>我是成大生，老實說很羨慕台清交都有這樣的活動，閉幕的時候聽到台大霸氣的說出今年預估招到 800 人，並且會招攬國外隊伍，震驚到說不出話來，雖說這幾所大學資源或許比我們豐富，但差異如此之大還是太令人訝異。號稱南霸天的我們，也不能辜負這名號阿！每年自己北上參加黑客松都在感慨，花了這一頓車錢，就是想看看同年紀的大學生究竟可以做到怎樣的程度，畢竟南北有別，成大風氣趨向保守，如果可以，很希望為成大注入一股熱血，據聞系上有老師也希望可以舉辦黑客松，已經開始招兵買馬籌畫流程。也讓自己想到或許我們可以借鏡梅竹黑克松的經驗，讓南部學生也有自己的黑客松！
 <img src="http://hackathon.nctu.edu.tw/img/logo-blue.png" alt="" /></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/02/chrome-bookmark-mojibake/">Chrome 標籤亂碼</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-12-02'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ubuntu 解決辦法如下：</p>
+  <entry>
+    <title type="html"><![CDATA[Chrome 標籤亂碼]]></title>
+    <link href="http://brandboat.github.io/blog/2014/12/02/chrome-bookmark-mojibake/"/>
+    <updated>2014-12-02T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2014/12/02/chrome-bookmark-mojibake</id>
+    <content type="html"><![CDATA[<p>Ubuntu 解決辦法如下：</p>
 
 <p><code>sudo vim /etc/fonts/conf.d/49-sansserif.conf</code>
 內容如下</p>
@@ -274,35 +159,15 @@ unalias fs &&gt; /dev/null 這指令是在看 hadoop 安裝指南 時注意到�
 <li>其他關於字型可參考的文章 ： <a href="http://scar.simcz.tw/article/2014/04/22/fix-ubuntu-14-04-lts-zh-font-selector/">http://scar.simcz.tw/article/2014/04/22/fix-ubuntu-14-04-lts-zh-font-selector/</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/16/Routing_on_OSM/">Routing on OpenStreetMap (Pgrouting)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-08-16'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Demo: <a href="http://routingonosm-brandboat.rhcloud.com/">http://routingonosm-brandboat.rhcloud.com/</a>
+  <entry>
+    <title type="html"><![CDATA[Routing on OpenStreetMap (Pgrouting)]]></title>
+    <link href="http://brandboat.github.io/blog/2014/08/16/Routing_on_OSM/"/>
+    <updated>2014-08-16T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2014/08/16/Routing_on_OSM</id>
+    <content type="html"><![CDATA[<p>Demo: <a href="http://routingonosm-brandboat.rhcloud.com/">http://routingonosm-brandboat.rhcloud.com/</a>
 github project: <a href="https://github.com/brandboat/Routing-On-OSM">https://github.com/brandboat/Routing-On-OSM</a></p>
 
 <p>這個 project 主要是利用 pgrouting 讓 openstreetmap 來做兩點最佳路徑規劃，像這類 routing project 其實已經是老生常談，大概 google 一下都能找到很類似的 project (<a href="http://wiki.openstreetmap.org/wiki/Routing">OSM Routing</a>)，但是利用 pgrouting 的似乎不多，google找到相關技術整合的文章也是寥寥可數，我在這邊分享我如何利用 openstreetmap + pgrouting + nodejs 寫出一個簡單的 routing project，以及遇到的問題。</p>
@@ -566,35 +431,15 @@ ex.橫跨路中央的橋就會讓結果受到干擾。(待解決)
 <a href="https://github.com/aredo/express4-bootstrap-starter/blob/master/app%2Fconfig%2Fexpress.js">https://github.com/aredo/express4-bootstrap-starter/blob/master/app%2Fconfig%2Fexpress.js</a>
 <a href="https://www.openshift.com/blogs/add-map-navigation-to-your-app-with-pgrouting-on-openshift">https://www.openshift.com/blogs/add-map-navigation-to-your-app-with-pgrouting-on-openshift</a>
 <a href="https://www.openshift.com/blogs/instant-mapping-applications-with-postgis-and-nodejs">https://www.openshift.com/blogs/instant-mapping-applications-with-postgis-and-nodejs</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/29/vimrc-colorscheme/">Vim 設置 Colorscheme</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-29'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/jpo/vim-railscasts-theme"><strong>vim-railscasts-theme</strong></a></p>
+  <entry>
+    <title type="html"><![CDATA[Vim 設置 Colorscheme]]></title>
+    <link href="http://brandboat.github.io/blog/2014/01/29/vimrc-colorscheme/"/>
+    <updated>2014-01-29T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2014/01/29/vimrc-colorscheme</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/jpo/vim-railscasts-theme"><strong>vim-railscasts-theme</strong></a></p>
 
 <ul>
 <li><p><strong><code>cd ~/.vim/colors</code></strong>
@@ -621,35 +466,15 @@ ex.橫跨路中央的橋就會讓結果受到干擾。(待解決)
 
 
 <p><code>set t_ut=</code></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/09/ubuntu-alttab-multiple-windows-bar/">解決 Ubuntu Alt+tab 顯示雙層切換視窗</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-01-09'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>9</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>這問題是因為在CompizConfig Setting Manager中Gereral欄位中開啟Mipmap選項的緣故。</strong>
+  <entry>
+    <title type="html"><![CDATA[解決 Ubuntu Alt+tab 顯示雙層切換視窗]]></title>
+    <link href="http://brandboat.github.io/blog/2014/01/09/ubuntu-alttab-multiple-windows-bar/"/>
+    <updated>2014-01-09T00:00:00+08:00</updated>
+    <id>http://brandboat.github.io/blog/2014/01/09/ubuntu-alttab-multiple-windows-bar</id>
+    <content type="html"><![CDATA[<p><strong>這問題是因為在CompizConfig Setting Manager中Gereral欄位中開啟Mipmap選項的緣故。</strong>
 <br/><br/>
 <img src="http://i292.photobucket.com/albums/mm16/namtlade/Windowswitcherfail.png" alt="markdown" /><br/><br/>
 圖片來源自: <a href="http://ubuntuforums.org/showthread.php?p=6024749">http://ubuntuforums.org/showthread.php?p=6024749</a></p>
@@ -670,106 +495,7 @@ ex.橫跨路中央的橋就會讓結果受到干擾。(待解決)
 
 <p><a href="http://www.flickr.com/photos/keithworld/12163521963/" title="select005, on Flickr"><img src="http://farm6.staticflickr.com/5473/12163521963_313a182365_z.jpg" alt="Bird Nest"></a><br/><br/>
 參考資料 ： <a href="http://ubuntuforums.org/showthread.php?p=6024749">http://ubuntuforums.org/showthread.php?p=6024749</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2015/02/09/bash_redirect/">Bash Redirect : &></a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/16/Mei_Chu_Hackthon/">梅竹黑客松</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/02/chrome-bookmark-mojibake/">Chrome 標籤亂碼</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/16/Routing_on_OSM/">Routing on OpenStreetMap (Pgrouting)</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/29/vimrc-colorscheme/">Vim 設置 Colorscheme</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - brandboat -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'brandboat';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
